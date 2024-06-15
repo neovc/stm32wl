@@ -64,60 +64,6 @@ const struct rcc_clock_scale rcc_hsi16_configs[RCC_CLOCK_CONFIG_END] = {
 		.apb1_frequency = 80000000,
 		.apb2_frequency = 80000000,
 	},
-	{ /* 120MHz PLL from HSI16 VR1 */
-		.pllm = 4,
-		.plln = 60,
-		.pllp = RCC_PLLCFGR_PLLP_DIV7,
-		.pllq = RCC_PLLCFGR_PLLQ_DIV6,
-		.pllr = RCC_PLLCFGR_PLLR_DIV2,
-		.pll_source = RCC_PLLCFGR_PLLSRC_HSI16,
-		.hpre = RCC_CFGR_HPRE_NODIV,
-		.ppre1 = RCC_CFGR_PPRE_NODIV,
-		.ppre2 = RCC_CFGR_PPRE_NODIV,
-		.voltage_scale = PWR_SCALE1,
-		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
-		FLASH_ACR_LATENCY_5WS,
-		.ahb_frequency  = 120000000,
-		.apb1_frequency = 120000000,
-		.apb2_frequency = 120000000,
-	},
-};
-
-const struct rcc_clock_scale rcc_hse_8mhz_configs[RCC_CLOCK_CONFIG_END] = {
-	{ /* 80MHz PLL from HSE 8M */
-		.pllm = 2,
-		.plln = 40,
-		.pllp = RCC_PLLCFGR_PLLP_DIV7,
-		.pllq = RCC_PLLCFGR_PLLQ_DIV2,
-		.pllr = RCC_PLLCFGR_PLLR_DIV2,
-		.pll_source = RCC_PLLCFGR_PLLSRC_HSE,
-		.hpre = RCC_CFGR_HPRE_NODIV,
-		.ppre1 = RCC_CFGR_PPRE_NODIV,
-		.ppre2 = RCC_CFGR_PPRE_NODIV,
-		.voltage_scale = PWR_SCALE1,
-		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
-		FLASH_ACR_LATENCY_4WS,
-		.ahb_frequency  = 80000000,
-		.apb1_frequency = 80000000,
-		.apb2_frequency = 80000000,
-	},
-	{ /* 120MHz PLL from HSE 8M */
-		.pllm = 2,
-		.plln = 60,
-		.pllp = RCC_PLLCFGR_PLLP_DIV7,
-		.pllq = RCC_PLLCFGR_PLLQ_DIV2,
-		.pllr = RCC_PLLCFGR_PLLR_DIV2,
-		.pll_source = RCC_PLLCFGR_PLLSRC_HSE,
-		.hpre = RCC_CFGR_HPRE_NODIV,
-		.ppre1 = RCC_CFGR_PPRE_NODIV,
-		.ppre2 = RCC_CFGR_PPRE_NODIV,
-		.voltage_scale = PWR_SCALE1,
-		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
-		FLASH_ACR_LATENCY_5WS,
-		.ahb_frequency  = 120000000,
-		.apb1_frequency = 120000000,
-		.apb2_frequency = 120000000,
-	},
 };
 
 void rcc_osc_ready_int_clear(enum rcc_osc osc)

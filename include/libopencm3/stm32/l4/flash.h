@@ -78,7 +78,6 @@
 #define FLASH_ACR_LATENCY_2WS		0x02
 #define FLASH_ACR_LATENCY_3WS		0x03
 #define FLASH_ACR_LATENCY_4WS		0x04
-#define FLASH_ACR_LATENCY_5WS		0x05
 
 /* --- FLASH_SR values ----------------------------------------------------- */
 
