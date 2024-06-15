@@ -1,8 +1,8 @@
 /** @defgroup rcc_defines RCC Defines
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
- * @brief <b>Defined Constants and Types for the STM32L4xx Reset and Clock
+ * @brief <b>Defined Constants and Types for the STM32WLxx Reset and Clock
  * Control</b>
  *
  * @version 1.0.0
@@ -112,46 +112,46 @@
  * @ingroup rcc_registers
  * @brief Clock Control register values
  @{*/
-#define RCC_CR_PLLRDY				(1 << 25)
-#define RCC_CR_PLLON				(1 << 24)
-#define RCC_CR_HSEBYP     			(1 << 21)
-#define RCC_CR_HSEPRE       			(1 << 20)
-#define RCC_CR_CSSON				(1 << 19)
-#define RCC_CR_HSERDY				(1 << 17)
-#define RCC_CR_HSEON				(1 << 16)
-#define RCC_CR_HSIKERDY   			(1 << 12)
-#define RCC_CR_HSIASFS				(1 << 11)
-#define RCC_CR_HSIRDY				(1 << 10)
-#define RCC_CR_HSIKERON				(1 << 9)
-#define RCC_CR_HSION				(1 << 8)
+#define RCC_CR_PLLRDY			(1 << 25)
+#define RCC_CR_PLLON			(1 << 24)
+#define RCC_CR_HSEBYP     		(1 << 21)
+#define RCC_CR_HSEPRE       		(1 << 20)
+#define RCC_CR_CSSON			(1 << 19)
+#define RCC_CR_HSERDY			(1 << 17)
+#define RCC_CR_HSEON			(1 << 16)
+#define RCC_CR_HSIKERDY   		(1 << 12)
+#define RCC_CR_HSIASFS			(1 << 11)
+#define RCC_CR_HSIRDY			(1 << 10)
+#define RCC_CR_HSIKERON			(1 << 9)
+#define RCC_CR_HSION			(1 << 8)
 /** @}*/
 
 /** @defgroup rcc_cr_msirange MSI Range
- * @ingroup STM32L4xx_rcc_defines
+ * @ingroup STM32WLxx_rcc_defines
  * @brief Range of the MSI oscillator
 Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 1 MHz, 2 MHz, 4 MHz (default value), 8 MHz, 16 MHz, 24 MHz, 32 MHz and 48 MHz
 @sa rcc_csr_msirange
 @{*/
-#define RCC_CR_MSIRANGE_SHIFT			4
-#define RCC_CR_MSIRANGE_MASK			0xf
-#define RCC_CR_MSIRANGE_100KHZ			0
-#define RCC_CR_MSIRANGE_200KHZ			1
-#define RCC_CR_MSIRANGE_400KHZ			2
-#define RCC_CR_MSIRANGE_800KHZ			3
-#define RCC_CR_MSIRANGE_1MHZ			4
-#define RCC_CR_MSIRANGE_2MHZ			5
-#define RCC_CR_MSIRANGE_4MHZ			6
-#define RCC_CR_MSIRANGE_8MHZ			7
-#define RCC_CR_MSIRANGE_16MHZ			8
-#define RCC_CR_MSIRANGE_24MHZ			9
-#define RCC_CR_MSIRANGE_32MHZ			10
-#define RCC_CR_MSIRANGE_48MHZ			11
+#define RCC_CR_MSIRANGE_SHIFT		4
+#define RCC_CR_MSIRANGE_MASK		0xf
+#define RCC_CR_MSIRANGE_100KHZ		0
+#define RCC_CR_MSIRANGE_200KHZ		1
+#define RCC_CR_MSIRANGE_400KHZ		2
+#define RCC_CR_MSIRANGE_800KHZ		3
+#define RCC_CR_MSIRANGE_1MHZ		4
+#define RCC_CR_MSIRANGE_2MHZ		5
+#define RCC_CR_MSIRANGE_4MHZ		6
+#define RCC_CR_MSIRANGE_8MHZ		7
+#define RCC_CR_MSIRANGE_16MHZ		8
+#define RCC_CR_MSIRANGE_24MHZ		9
+#define RCC_CR_MSIRANGE_32MHZ		10
+#define RCC_CR_MSIRANGE_48MHZ		11
 /**@}*/
-#define RCC_CR_MSIRGSEL				(1 << 3)
-#define RCC_CR_MSIPLLEN				(1 << 2)
-#define RCC_CR_MSIRDY				(1 << 1)
-#define RCC_CR_MSION				(1 << 0)
+#define RCC_CR_MSIRGSEL			(1 << 3)
+#define RCC_CR_MSIPLLEN			(1 << 2)
+#define RCC_CR_MSIRDY			(1 << 1)
+#define RCC_CR_MSION			(1 << 0)
 
 
 /* --- RCC_ICSCR values ---------------------------------------------------- */
@@ -169,83 +169,83 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 /* --- RCC_CFGR values ----------------------------------------------------- */
 
 /* MCOPRE */
-#define RCC_CFGR_MCOPRE_DIV1	    0
-#define RCC_CFGR_MCOPRE_DIV2	    1
-#define RCC_CFGR_MCOPRE_DIV4	    2
-#define RCC_CFGR_MCOPRE_DIV8	    3
-#define RCC_CFGR_MCOPRE_DIV16	    4
-#define RCC_CFGR_MCOPRE_SHIFT	    28
-#define RCC_CFGR_MCOPRE_MASK	    0x7
+#define RCC_CFGR_MCOPRE_DIV1		0
+#define RCC_CFGR_MCOPRE_DIV2		1
+#define RCC_CFGR_MCOPRE_DIV4		2
+#define RCC_CFGR_MCOPRE_DIV8		3
+#define RCC_CFGR_MCOPRE_DIV16		4
+#define RCC_CFGR_MCOPRE_SHIFT		28
+#define RCC_CFGR_MCOPRE_MASK		0x7
 
 /* MCO: Microcontroller clock output */
-#define RCC_CFGR_MCO_NOCLK			0x0
-#define RCC_CFGR_MCO_SYSCLK			0x1
-#define RCC_CFGR_MCO_MSI			0x2
-#define RCC_CFGR_MCO_HSI16			0x3
-#define RCC_CFGR_MCO_HSE			0x4
-#define RCC_CFGR_MCO_PLL			0x5
-#define RCC_CFGR_MCO_LSI			0x6
-#define RCC_CFGR_MCO_LSE			0x8
-#define RCC_CFGR_MCO_PLLP 			0xD
-#define RCC_CFGR_MCO_PLLQ     			0xE
+#define RCC_CFGR_MCO_NOCLK		0x0
+#define RCC_CFGR_MCO_SYSCLK		0x1
+#define RCC_CFGR_MCO_MSI		0x2
+#define RCC_CFGR_MCO_HSI16		0x3
+#define RCC_CFGR_MCO_HSE		0x4
+#define RCC_CFGR_MCO_PLL		0x5
+#define RCC_CFGR_MCO_LSI		0x6
+#define RCC_CFGR_MCO_LSE		0x8
+#define RCC_CFGR_MCO_PLLP 		0xD
+#define RCC_CFGR_MCO_PLLQ     		0xE
 
-#define RCC_CFGR_MCO_SHIFT			24
-#define RCC_CFGR_MCO_MASK			0xf
+#define RCC_CFGR_MCO_SHIFT		24
+#define RCC_CFGR_MCO_MASK		0xf
 
 /* Wakeup from stop clock selection */
 #define RCC_CFGR_STOPWUCK_MSI		(0 << 15)
 #define RCC_CFGR_STOPWUCK_HSI16		(1 << 15)
 
-#define RCC_CFGR_PPRE1_SHIFT			8
-#define RCC_CFGR_PPRE1_MASK			0x7
-#define RCC_CFGR_PPRE2_SHIFT			11
-#define RCC_CFGR_PPRE2_MASK			0x7
+#define RCC_CFGR_PPRE1_SHIFT		8
+#define RCC_CFGR_PPRE1_MASK		0x7
+#define RCC_CFGR_PPRE2_SHIFT		11
+#define RCC_CFGR_PPRE2_MASK		0x7
 /** @defgroup rcc_cfgr_apbxpre RCC_CFGR APBx prescale factors
  * These can be used for both APB1 and APB2 prescaling
  * @{
  */
-#define RCC_CFGR_PPRE_NODIV			0x0
-#define RCC_CFGR_PPRE_DIV2			0x4
-#define RCC_CFGR_PPRE_DIV4			0x5
-#define RCC_CFGR_PPRE_DIV8			0x6
-#define RCC_CFGR_PPRE_DIV16			0x7
+#define RCC_CFGR_PPRE_NODIV		0x0
+#define RCC_CFGR_PPRE_DIV2		0x4
+#define RCC_CFGR_PPRE_DIV4		0x5
+#define RCC_CFGR_PPRE_DIV8		0x6
+#define RCC_CFGR_PPRE_DIV16		0x7
 /**@}*/
 
-#define RCC_CFGR_HPRE_SHIFT			4
-#define RCC_CFGR_HPRE_MASK			0xf
+#define RCC_CFGR_HPRE_SHIFT		4
+#define RCC_CFGR_HPRE_MASK		0xf
 /** @defgroup rcc_cfgr_ahbpre RCC_CFGR AHB prescale factors
 @{*/
-#define RCC_CFGR_HPRE_NODIV			0x0
-#define RCC_CFGR_HPRE_DIV3      		0x1
-#define RCC_CFGR_HPRE_DIV5      		0x2
-#define RCC_CFGR_HPRE_DIV6      		0x5
-#define RCC_CFGR_HPRE_DIV10     		0x6
-#define RCC_CFGR_HPRE_DIV32     		0x7
-#define RCC_CFGR_HPRE_DIV2			(0x8 + 0)
-#define RCC_CFGR_HPRE_DIV4			(0x8 + 1)
-#define RCC_CFGR_HPRE_DIV8			(0x8 + 2)
-#define RCC_CFGR_HPRE_DIV16			(0x8 + 3)
-#define RCC_CFGR_HPRE_DIV64			(0x8 + 4)
-#define RCC_CFGR_HPRE_DIV128			(0x8 + 5)
-#define RCC_CFGR_HPRE_DIV256			(0x8 + 6)
-#define RCC_CFGR_HPRE_DIV512			(0x8 + 7)
+#define RCC_CFGR_HPRE_NODIV		0x0
+#define RCC_CFGR_HPRE_DIV3      	0x1
+#define RCC_CFGR_HPRE_DIV5      	0x2
+#define RCC_CFGR_HPRE_DIV6      	0x5
+#define RCC_CFGR_HPRE_DIV10     	0x6
+#define RCC_CFGR_HPRE_DIV32     	0x7
+#define RCC_CFGR_HPRE_DIV2		(0x8 + 0)
+#define RCC_CFGR_HPRE_DIV4		(0x8 + 1)
+#define RCC_CFGR_HPRE_DIV8		(0x8 + 2)
+#define RCC_CFGR_HPRE_DIV16		(0x8 + 3)
+#define RCC_CFGR_HPRE_DIV64		(0x8 + 4)
+#define RCC_CFGR_HPRE_DIV128		(0x8 + 5)
+#define RCC_CFGR_HPRE_DIV256		(0x8 + 6)
+#define RCC_CFGR_HPRE_DIV512		(0x8 + 7)
 /**@}*/
 
 /* SWS: System clock switch status */
-#define RCC_CFGR_SWS_MSI			0x0
-#define RCC_CFGR_SWS_HSI16			0x1
-#define RCC_CFGR_SWS_HSE			0x2
-#define RCC_CFGR_SWS_PLL			0x3
-#define RCC_CFGR_SWS_MASK			0x3
-#define RCC_CFGR_SWS_SHIFT			2
+#define RCC_CFGR_SWS_MSI		0x0
+#define RCC_CFGR_SWS_HSI16		0x1
+#define RCC_CFGR_SWS_HSE		0x2
+#define RCC_CFGR_SWS_PLL		0x3
+#define RCC_CFGR_SWS_MASK		0x3
+#define RCC_CFGR_SWS_SHIFT		2
 
 /* SW: System clock switch */
-#define RCC_CFGR_SW_MSI				0x0
-#define RCC_CFGR_SW_HSI16			0x1
-#define RCC_CFGR_SW_HSE				0x2
-#define RCC_CFGR_SW_PLL				0x3
-#define RCC_CFGR_SW_MASK			0x3
-#define RCC_CFGR_SW_SHIFT			0
+#define RCC_CFGR_SW_MSI			0x0
+#define RCC_CFGR_SW_HSI16		0x1
+#define RCC_CFGR_SW_HSE			0x2
+#define RCC_CFGR_SW_PLL			0x3
+#define RCC_CFGR_SW_MASK		0x3
+#define RCC_CFGR_SW_SHIFT		0
 
 /* --- RCC_PLLCFGR - PLL Configuration Register */
 #define RCC_PLLCFGR_PLLR_SHIFT		29
@@ -278,7 +278,7 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 #define RCC_PLLCFGR_PLLPEN		(1 << 16)
 
 /** @defgroup rcc_pllcfgr_plln RCC_PLLCFGR PLLN values
-@ingroup STM32L4xx_rcc_defines
+@ingroup STM32WLxx_rcc_defines
  * Allowed values 8 <= n <= 127
 @{*/
 #define RCC_PLLCFGR_PLLN_SHIFT		0x8
@@ -286,7 +286,7 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 /**@}*/
 
 /** @defgroup rcc_pllcfgr_pllm RCC_PLLCFGR PLLM values
-@ingroup STM32L4xx_rcc_defines
+@ingroup STM32WLxx_rcc_defines
  * Allowed values 1 <= m <= 8
 @{*/
 #define RCC_PLLCFGR_PLLM_SHIFT		0x4
@@ -408,7 +408,7 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 /** @defgroup rcc_ahbenr_en RCC_AHBxENR enable values (full set)
  *@{*/
 /** @defgroup rcc_ahb1enr_en RCC_AHB1ENR enable values
-@ingroup STM32L4xx_rcc_defines
+@ingroup STM32WLxx_rcc_defines
 
 @{*/
 #define RCC_AHB1ENR_CRCEN			(1 << 12)
@@ -420,7 +420,7 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 /* --- RCC_AHB2ENR values --------------------------------------------------- */
 
 /** @defgroup rcc_ahb2enr_en RCC_AHB2ENR enable values
-@ingroup STM32L4xx_rcc_defines
+@ingroup STM32WLxx_rcc_defines
 
 @{*/
 #define RCC_AHB2ENR_GPIOHEN			(1 << 7)
@@ -432,7 +432,7 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 /* --- RCC_AHB3ENR values --------------------------------------------------- */
 
 /** @defgroup rcc_ahb3enr_en RCC_AHB3ENR enable values
-@ingroup STM32L4xx_rcc_defines
+@ingroup STM32WLxx_rcc_defines
 
 @{*/
 #define RCC_AHB3ENR_FLASHEN			(1 << 25)
@@ -449,7 +449,7 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 /** @defgroup rcc_apb1enr_en RCC_APB1ENRx enable values (full set)
  *@{*/
 /** @defgroup rcc_apb1enr1_en RCC_APB1ENR1 enable values
-@ingroup STM32L4xx_rcc_defines
+@ingroup STM32WLxx_rcc_defines
 
 @{*/
 #define RCC_APB1ENR1_LPTIM1EN			(1 << 31)
@@ -467,7 +467,7 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 /* --- RCC_APB1ENR2 values -------------------------------------------------- */
 
 /** @defgroup rcc_apb1enr2_en RCC_APB1ENR2 enable values
-@ingroup STM32L4xx_rcc_defines
+@ingroup STM32WLxx_rcc_defines
 
 @{*/
 #define RCC_APB1ENR2_LPTIM3EN			(1 << 6)
@@ -621,9 +621,9 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 #define RCC_BDCR_RTCSEL_MASK		0x3
 #define RCC_BDCR_RTCSEL_SHIFT		8
 
-#define RCC_BDCR_LSESYSEN			(1 << 7)
-#define RCC_BDCR_LSECSSD			(1 << 6)
-#define RCC_BDCR_LSECSSON			(1 << 5)
+#define RCC_BDCR_LSESYSEN		(1 << 7)
+#define RCC_BDCR_LSECSSD		(1 << 6)
+#define RCC_BDCR_LSECSSON		(1 << 5)
 
 #define RCC_BDCR_LSEDRV_LOW		0
 #define RCC_BDCR_LSEDRV_MEDLOW		1
@@ -632,9 +632,9 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 #define RCC_BDCR_LSEDRV_MASK		0x3
 #define RCC_BDCR_LSEDRV_SHIFT		3
 
-#define RCC_BDCR_LSEBYP				(1 << 2)
-#define RCC_BDCR_LSERDY				(1 << 1)
-#define RCC_BDCR_LSEON				(1 << 0)
+#define RCC_BDCR_LSEBYP			(1 << 2)
+#define RCC_BDCR_LSERDY			(1 << 1)
+#define RCC_BDCR_LSEON			(1 << 0)
 
 /* --- RCC_CSR - Control/Status register ----------------------------------- */
 
@@ -656,7 +656,7 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 
 /** @defgroup rcc_csr_msirange MSI Range after standby values
 @brief Range of the MSI oscillator after returning from standby
-@ingroup STM32L4xx_rcc_defines
+@ingroup STM32WLxx_rcc_defines
 @sa rcc_cr_msirange
 @{*/
 #define RCC_CSR_MSIRANGE_MASK			0xf
@@ -675,21 +675,21 @@ Twelve frequency ranges are available: 100 kHz, 200 kHz, 400 kHz, 800 kHz,
 
 #define RCC_EXTCFGR_SHDHPREF			(1 << 16)
 
-#define RCC_EXTCFGR_SHDHPRE_SHIFT   0
-#define RCC_EXTCFGR_SHDHPRE_MASK    0xf
-#define RCC_EXTCFGR_SHDHPRE_DIV3    1
-#define RCC_EXTCFGR_SHDHPRE_DIV5    2
-#define RCC_EXTCFGR_SHDHPRE_DIV6    5
-#define RCC_EXTCFGR_SHDHPRE_DIV10   6
-#define RCC_EXTCFGR_SHDHPRE_DIV32   7
-#define RCC_EXTCFGR_SHDHPRE_DIV2    (0x8 + 0)
-#define RCC_EXTCFGR_SHDHPRE_DIV4    (0x8 + 1)
-#define RCC_EXTCFGR_SHDHPRE_DIV8    (0x8 + 2)
-#define RCC_EXTCFGR_SHDHPRE_DIV16   (0x8 + 3)
-#define RCC_EXTCFGR_SHDHPRE_DIV64   (0x8 + 4)
-#define RCC_EXTCFGR_SHDHPRE_DIV128  (0x8 + 5)
-#define RCC_EXTCFGR_SHDHPRE_DIV256  (0x8 + 6)
-#define RCC_EXTCFGR_SHDHPRE_DIV512  (0x8 + 7)
+#define RCC_EXTCFGR_SHDHPRE_SHIFT		0
+#define RCC_EXTCFGR_SHDHPRE_MASK		0xf
+#define RCC_EXTCFGR_SHDHPRE_DIV3		1
+#define RCC_EXTCFGR_SHDHPRE_DIV5		2
+#define RCC_EXTCFGR_SHDHPRE_DIV6		5
+#define RCC_EXTCFGR_SHDHPRE_DIV10		6
+#define RCC_EXTCFGR_SHDHPRE_DIV32		7
+#define RCC_EXTCFGR_SHDHPRE_DIV2		(0x8 + 0)
+#define RCC_EXTCFGR_SHDHPRE_DIV4		(0x8 + 1)
+#define RCC_EXTCFGR_SHDHPRE_DIV8		(0x8 + 2)
+#define RCC_EXTCFGR_SHDHPRE_DIV16		(0x8 + 3)
+#define RCC_EXTCFGR_SHDHPRE_DIV64		(0x8 + 4)
+#define RCC_EXTCFGR_SHDHPRE_DIV128		(0x8 + 5)
+#define RCC_EXTCFGR_SHDHPRE_DIV256		(0x8 + 6)
+#define RCC_EXTCFGR_SHDHPRE_DIV512		(0x8 + 7)
 
 
 struct rcc_clock_scale {

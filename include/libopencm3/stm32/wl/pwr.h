@@ -1,8 +1,8 @@
 /** @defgroup pwr_defines PWR Defines
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
- * @brief <b>Defined Constants and Types for the STM32L4xx Power Control</b>
+ * @brief <b>Defined Constants and Types for the STM32WLxx Power Control</b>
  *
  * @version 1.0.0
  *
@@ -93,7 +93,7 @@ specific memorymap.h header before including this header file.*/
 #define PWR_CR2_PLS_SHIFT		1
 #define PWR_CR2_PLS_MASK		0x07
 /** @defgroup pwr_pls PVD level selection
-@ingroup STM32L4_pwr_defines
+@ingroup STM32WL_pwr_defines
 @{*/
 #define PWR_CR2_PLS_2V0			0x00
 #define PWR_CR2_PLS_2V2			0x01
