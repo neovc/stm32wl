@@ -51,6 +51,7 @@ specific memorymap.h header before including this header file.*/
 #define PWR_SR1			MMIO32(POWER_CONTROL_BASE + 0x10)
 #define PWR_SR2			MMIO32(POWER_CONTROL_BASE + 0x14)
 #define PWR_SCR			MMIO32(POWER_CONTROL_BASE + 0x18)
+#define PWR_CR5			MMIO32(POWER_CONTROL_BASE + 0x1C)
 
 #define PWR_PORT_A		MMIO32(POWER_CONTROL_BASE + 0x20)
 #define PWR_PORT_B		MMIO32(POWER_CONTROL_BASE + 0x28)
@@ -60,7 +61,8 @@ specific memorymap.h header before including this header file.*/
 #define PWR_PUCR(pwr_port)	MMIO32((pwr_port) + 0x00)
 #define PWR_PDCR(pwr_port)	MMIO32((pwr_port) + 0x04)
 
-#define PWR_SUBGHZSPICR MMIO32(POWER_CONTROL_BASE + 0x90)
+#define PWR_EXTSCR		MMIO32(POWER_CONTROL_BASE + 0x88)
+#define PWR_SUBGHZSPICR		MMIO32(POWER_CONTROL_BASE + 0x90)
 
 /* --- PWR_CR1 values ------------------------------------------------------- */
 
@@ -72,6 +74,9 @@ specific memorymap.h header before including this header file.*/
 #define PWR_CR1_VOS_RANGE_2		2
 
 #define PWR_CR1_DBP			(1 << 8)
+#define PWR_CR1_FPDS			(1 << 5)
+#define PWR_CR1_FPDR			(1 << 4)
+#define PWR_CR1_SUBGHZSPINSSSEL		(1 << 3)
 
 #define PWR_CR1_LPMS_SHIFT		0
 #define PWR_CR1_LPMS_MASK		0x07
@@ -83,15 +88,10 @@ specific memorymap.h header before including this header file.*/
 
 /* --- PWR_CR2 values ------------------------------------------------------- */
 
-#define PWR_CR2_USV		(1 << 10)
-#define PWR_CR2_IOSV		(1 << 9)
-#define PWR_CR2_PVME4		(1 << 7)
-#define PWR_CR2_PVME3		(1 << 6)
-#define PWR_CR2_PVME2		(1 << 5)
-#define PWR_CR2_PVME1		(1 << 4)
+#define PWR_CR2_PVME3			(1 << 6)
 
-#define PWR_CR2_PLS_SHIFT	1
-#define PWR_CR2_PLS_MASK	0x07
+#define PWR_CR2_PLS_SHIFT		1
+#define PWR_CR2_PLS_MASK		0x07
 /** @defgroup pwr_pls PVD level selection
 @ingroup STM32L4_pwr_defines
 @{*/
@@ -105,65 +105,75 @@ specific memorymap.h header before including this header file.*/
 #define PWR_CR2_PLS_PVD_IN		0x07
 /**@}*/
 
-#define PWR_CR2_PVDE		(1 << 0)
+#define PWR_CR2_PVDE			(1 << 0)
 
 /* --- PWR_CR3 values ------------------------------------------------------- */
 
-#define PWR_CR3_EIWUL		  (1 << 15)
-#define PWR_CR3_EWRFBUSY  (1 << 11)
-#define PWR_CR3_APC		    (1 << 10)
-#define PWR_CR3_RRS		    (1 << 8)
-#define PWR_CR3_EWUP5		  (1 << 4)
-#define PWR_CR3_EWUP4		  (1 << 3)
-#define PWR_CR3_EWUP3		  (1 << 2)
-#define PWR_CR3_EWUP2	  	(1 << 1)
-#define PWR_CR3_EWUP1		  (1 << 0)
+#define PWR_CR3_EIWUL			(1 << 15)
+#define PWR_CR3_EWRFIRQ			(1 << 13)
+#define PWR_CR3_EWRFBUSY		(1 << 11)
+#define PWR_CR3_APC			(1 << 10)
+#define PWR_CR3_RRS			(1 << 9)
+#define PWR_CR3_EWPVD			(1 << 8)
+#define PWR_CR3_ULPEN			(1 << 7)
+#define PWR_CR3_EWUP3			(1 << 2)
+#define PWR_CR3_EWUP2			(1 << 1)
+#define PWR_CR3_EWUP1			(1 << 0)
 
 /* --- PWR_CR4 values ------------------------------------------------------- */
 
-#define PWR_CR4_VBRS		(1 << 9)
-#define PWR_CR4_VBE		(1 << 8)
-#define PWR_CR4_WP5		(1 << 4)
-#define PWR_CR4_WP4		(1 << 3)
-#define PWR_CR4_WP3		(1 << 2)
-#define PWR_CR4_WP2		(1 << 1)
-#define PWR_CR4_WP1		(1 << 0)
+#define PWR_CR4_WRFBUSYP		(1 << 11)
+#define PWR_CR4_VBRS			(1 << 9)
+#define PWR_CR4_VBE			(1 << 8)
+#define PWR_CR4_WP3			(1 << 2)
+#define PWR_CR4_WP2			(1 << 1)
+#define PWR_CR4_WP1			(1 << 0)
 
 /* --- PWR_SR1 values ------------------------------------------------------- */
 
-#define PWR_SR1_WUFI		  (1 << 15)
-#define PWR_SR1_WRFBUSYF  (1 << 11)
-#define PWR_SR1_PVDF		  (1 << 8)
-#define PWR_SR1_WUF3		  (1 << 2)
-#define PWR_SR1_WUF2		  (1 << 1)
-#define PWR_SR1_WUF1		  (1 << 0)
+#define PWR_SR1_WUFI			(1 << 15)
+#define PWR_SR1_WRFBUSYF		(1 << 11)
+#define PWR_SR1_PVDF			(1 << 8)
+#define PWR_SR1_WUF3			(1 << 2)
+#define PWR_SR1_WUF2			(1 << 1)
+#define PWR_SR1_WUF1			(1 << 0)
 
 /* --- PWR_SR2 values ------------------------------------------------------- */
 
-#define PWR_SR2_PVMO3     (1 << 14)
-#define PWR_SR2_PVDO      (1 << 11)
-#define PWR_SR2_VOSF      (1 << 10)
-#define PWR_SR2_REGLPF    (1 << 9)
-#define PWR_SR2_REGLPS    (1 << 8)
-#define PWR_SR2_FLASHRDY  (1 << 7)
-#define PWR_SR2_REGMRS    (1 << 6)
-#define PWR_SR2_RFEOLF    (1 << 5)
-#define PWR_SR2_LDORDY    (1 << 4)
-#define PWR_SR2_SMPSRDY   (1 << 3)
-#define PWR_SR2_RFBUSYMS  (1 << 2)
-#define PWR_SR2_RFBUSYS   (1 << 1)
+#define PWR_SR2_PVMO3			(1 << 14)
+#define PWR_SR2_PVDO			(1 << 11)
+#define PWR_SR2_VOSF			(1 << 10)
+#define PWR_SR2_REGLPF			(1 << 9)
+#define PWR_SR2_REGLPS			(1 << 8)
+#define PWR_SR2_FLASHRDY		(1 << 7)
+#define PWR_SR2_REGMRS			(1 << 6)
+#define PWR_SR2_RFEOLF			(1 << 5)
+#define PWR_SR2_LDORDY			(1 << 4)
+#define PWR_SR2_SMPSRDY			(1 << 3)
+#define PWR_SR2_RFBUSYMS		(1 << 2)
+#define PWR_SR2_RFBUSYS			(1 << 1)
 
 /* --- PWR_SCR values ------------------------------------------------------- */
 
-#define PWR_SCR_CSBF		(1 << 8)
-#define PWR_SCR_CWUF5		(1 << 4)
-#define PWR_SCR_CWUF4		(1 << 3)
-#define PWR_SCR_CWUF3		(1 << 2)
-#define PWR_SCR_CWUF2		(1 << 1)
-#define PWR_SCR_CWUF1		(1 << 0)
+#define PWR_SCR_CWRFBUSYF		(1 << 11)
+#define PWR_SCR_CSBF			(1 << 8)
+#define PWR_SCR_CWUF3			(1 << 2)
+#define PWR_SCR_CWUF2			(1 << 1)
+#define PWR_SCR_CWUF1			(1 << 0)
+
+/* --- PWR_CR5 values ------------------------------------------------------- */
+#define PWR_CR5_SMPSEN			(1 << 15)
+#define PWR_CR5_RFEOLEN			(1 << 14)
+
+/* --- PWR_EXTSCR values ------------------------------------------------------- */
+#define PWR_EXTSCR_C1DS			(1 << 14)
+#define PWR_EXTSCR_C1STOPF		(1 << 10)
+#define PWR_EXTSCR_C1STOP2F		(1 << 9)
+#define PWR_EXTSCR_C1SBF		(1 << 8)
+#define PWR_EXTSCR_C1CSSF		(1 << 0)
 
 /* --- PWR_SUBGHZSPICR ------------------------------------------------------- */
-#define PWR_SUBGHZSPICR_NSS (1 << 15)
+#define PWR_SUBGHZSPICR_NSS 		(1 << 15)
 
 /* --- PWR function prototypes ------------------------------------------- */
 
