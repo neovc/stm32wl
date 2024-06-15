@@ -274,6 +274,9 @@ stm32h74[357]?g* stm32h74xxg RAM=512K RAM2=128K RAM3=128K RAM4=32K RAM5=64K CCM=
 stm32h75[357]?i* stm32h7xxxi RAM=512K RAM2=128K RAM3=128K RAM4=32K RAM5=64K CCM=128K
 stm32h750?b* stm32h7xxxb RAM=512K RAM2=128K RAM3=128K RAM4=32K RAM5=64K CCM=128K
 
+# For STM32WLEx
+stm32wl* stm32wl ROM=256K RAM=32K RAM2=32K
+
 ################################################################################
 # the SAM3 chips
 

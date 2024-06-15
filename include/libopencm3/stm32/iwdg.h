@@ -38,6 +38,8 @@
 #       include <libopencm3/stm32/l1/iwdg.h>
 #elif defined(STM32L4)
 #       include <libopencm3/stm32/l4/iwdg.h>
+#elif defined(STM32WL)
+#       include <libopencm3/stm32/wl/iwdg.h>
 #elif defined(STM32G0)
 #       include <libopencm3/stm32/g0/iwdg.h>
 #elif defined(STM32G4)
