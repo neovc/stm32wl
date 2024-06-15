@@ -103,7 +103,7 @@ void exti_enable_request(uint32_t extis)
     /* Enable events. */
     EXTI_EMR1 |= EXTI_MASK(extis);
   }
-	
+
 }
 
 void exti_disable_request(uint32_t extis)
