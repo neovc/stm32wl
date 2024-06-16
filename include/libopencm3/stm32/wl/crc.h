@@ -1,8 +1,8 @@
 /** @defgroup crc_defines CRC Defines
  *
- * @brief <b>Defined Constants and Types for the STM32L4xx CRC Generator </b>
+ * @brief <b>Defined Constants and Types for the STM32WLxx CRC Generator </b>
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
  * LGPL License Terms @ref lgpl_license
  */

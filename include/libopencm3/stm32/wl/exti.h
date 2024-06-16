@@ -1,8 +1,8 @@
 /** @defgroup exti_defines EXTI Defines
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
- * @brief <b>Defined Constants and Types for the STM32L4xx EXTI Control</b>
+ * @brief <b>Defined Constants and Types for the STM32WLxx EXTI Control</b>
  *
  * @version 1.0.0
  *

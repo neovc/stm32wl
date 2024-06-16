@@ -334,8 +334,3 @@ END_DECLS
 /**@}*/
 
 #endif
-
-END_DECLS
-
-
-#endif

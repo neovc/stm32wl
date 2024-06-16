@@ -1,10 +1,10 @@
-/** @page libopencm3 STM32L4
+/** @page libopencm3 STM32WL
 
 @version 1.0.0
 
 @date 12 February 2015
 
-API documentation for ST Microelectronics STM32L4 Cortex M4 series.
+API documentation for ST Microelectronics STM32WL Cortex M4 series.
 
 LGPL License Terms @ref lgpl_license
 */
@@ -13,8 +13,8 @@ LGPL License Terms @ref lgpl_license
  * APIs for device peripherals
  */
 
-/** @defgroup STM32L4xx STM32L4xx
-Libraries for ST Microelectronics STM32L4xx series.
+/** @defgroup STM32WLxx STM32WLxx
+Libraries for ST Microelectronics STM32WLxx series.
 
 @version 1.0.0
 
@@ -23,9 +23,9 @@ Libraries for ST Microelectronics STM32L4xx series.
 LGPL License Terms @ref lgpl_license
 */
 
-/** @defgroup STM32L4xx_defines STM32L4xx Defines
+/** @defgroup STM32WLxx_defines STM32WLxx Defines
 
-@brief Defined Constants and Types for the STM32L4xx series
+@brief Defined Constants and Types for the STM32WLxx series
 
 @version 1.0.0
 

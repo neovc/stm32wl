@@ -1,8 +1,8 @@
 /** @defgroup dma_defines DMA Defines
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
- * @brief Defined Constants and Types for the STM32L4xx DMA Controller
+ * @brief Defined Constants and Types for the STM32WLxx DMA Controller
  *
  * @version 1.0.0
  *

@@ -2,7 +2,7 @@
  *
  * @brief <b>Defined Constants and Types for the Clock Recovery System</b>
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
  *LGPL License Terms @ref lgpl_license
  */

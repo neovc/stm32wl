@@ -1,8 +1,8 @@
 /** @defgroup dac_defines DAC Defines
 
-@brief <b>Defined Constants and Types for the STM32L4xx DAC</b>
+@brief <b>Defined Constants and Types for the STM32WLxx DAC</b>
 
-@ingroup STM32L4xx_defines
+@ingroup STM32WLxx_defines
 
 @version 1.0.0
 
