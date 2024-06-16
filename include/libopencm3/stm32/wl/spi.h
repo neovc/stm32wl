@@ -1,8 +1,8 @@
 /** @defgroup spi_defines SPI Defines
  *
- * @brief <b>Defined Constants and Types for the STM32L4xx SPI</b>
+ * @brief <b>Defined Constants and Types for the STM32WLxx SPI</b>
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
  * @version 1.0.0
  *

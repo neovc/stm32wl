@@ -1,8 +1,8 @@
 /** @defgroup syscfg_defines SYSCFG Defines
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
- * @brief Defined Constants and Types for the STM32L4xx Sysconfig
+ * @brief Defined Constants and Types for the STM32WLxx Sysconfig
  *
  * @version 1.0.0
  *
@@ -47,25 +47,16 @@
 #define SYSCFG_CFGR2			MMIO32(SYSCFG_BASE + 0x1C)
 #define SYSCFG_SWPR			MMIO32(SYSCFG_BASE + 0x20)
 #define SYSCFG_SKR			MMIO32(SYSCFG_BASE + 0x24)
-#define SYSCFG_SWPR2			MMIO32(SYSCFG_BASE + 0x29)
+#define SYSCFG_RFDCR			MMIO32(SYSCFG_BASE + 0x208)
 
 /* --- SYSCFG_MEMRMP Values ------------------------------------------------ */
 
 #define SYSCFG_MEMRMP_MEM_MODE_MASK	7
 #define SYSCFG_MEMRMP_MEM_MODE_FLASH	0
 #define SYSCFG_MEMRMP_MEM_MODE_SYSTEM	1
-#define SYSCFG_MEMRMP_MEM_MODE_FMC	2
-#define SYSCFG_MEMRMP_MEM_MODE_SRAM	3
-#define SYSCFG_MEMRMP_MEM_MODE_QSPI	6
+#define SYSCFG_MEMRMP_MEM_MODE_SRAM1	3
 
 /* --- SYSCFG_CFGR1 Values ------------------------------------------------- */
-
-#define SYSCFG_CFGR1_FPU_IE_INEXACT	(1 << 31)
-#define SYSCFG_CFGR1_FPU_IE_DENORMAL	(1 << 30)
-#define SYSCFG_CFGR1_FPU_IE_OVERFLOW	(1 << 29)
-#define SYSCFG_CFGR1_FPU_IE_UNDERFLOW	(1 << 28)
-#define SYSCFG_CFGR1_FPU_IE_DIVZERO	(1 << 27)
-#define SYSCFG_CFGR1_FPU_IE_INVALID	(1 << 26)
 
 #define SYSCFG_CFGR1_I2C3_FMP		(1 << 22)
 #define SYSCFG_CFGR1_I2C2_FMP		(1 << 21)
@@ -77,7 +68,6 @@
 #define SYSCFG_CFGR1_I2C_PB6_FMP	(1 << 16)
 
 #define SYSCFG_CFGR1_BOOSTEN		(1 << 8)
-#define SYSCFG_CFGR1_FWDIS		(1 << 0)
 
 /* --- SYSCFG_EXTICR Values -------------------------------------------------*/
 
@@ -85,13 +75,12 @@
 #define SYSCFG_EXTICR_GPIOA		0
 #define SYSCFG_EXTICR_GPIOB		1
 #define SYSCFG_EXTICR_GPIOC		2
-#define SYSCFG_EXTICR_GPIOD		3
-#define SYSCFG_EXTICR_GPIOE		4
 #define SYSCFG_EXTICR_GPIOH		7
 
 /* --- SYSCFG_SCSR Values -------------------------------------------------- */
 
-#define SYSCFG_SCSR_SRAM2BSY		(1 << 1)
+#define SYSCFG_SCSR_PKASRAMBSY		(1 << 8)
+#define SYSCFG_SCSR_SRAMBSY		(1 << 1)
 #define SYSCFG_SCSR_SRAM2ER		(1 << 0)
 
 /* --- SYSCFG_CFGR2 Values ------------------------------------------------- */
@@ -104,7 +93,7 @@
 
 /* --- SYSCFG_SWPR Values -------------------------------------------------- */
 
-/* 0 - 15 or 0 - 32 depending on L4 version */
+/* 0 - 31 */
 #define SYSCFG_SWPR_PxWP(x)		(1 << x)
 
 /* --- SYSCFG_SKR Values --------------------------------------------------- */
@@ -112,10 +101,8 @@
 #define SYSCFG_SKR_KEY1			0xCA
 #define SYSCFG_SKR_KEY2			0x53
 
-/* --- SYSCFG_SWPR2 Values -------------------------------------------------- */
-
-/* 32 - 63 or not available depending on L4 version */
-#define SYSCFG_SWPR2_PxWP(x)		(1 << (x - 32))
+/* --- SYSCFG_RFDCR Values --------------------------------------------------- */
+#define SYSCFG_RFDCR_RFTBSEL		(1 << 0)
 
 /**@}*/
 

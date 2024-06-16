@@ -1,8 +1,8 @@
 /** @defgroup gpio_defines GPIO Defines
  *
- * @brief <b>Defined Constants and Types for the STM32L4xx General Purpose I/O</b>
+ * @brief <b>Defined Constants and Types for the STM32WLxx General Purpose I/O</b>
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
  * @version 1.0.0
  *
@@ -47,13 +47,6 @@
 #define GPIOB_BRR			GPIO_BRR(GPIOB)
 #define GPIOC_BRR			GPIO_BRR(GPIOC)
 #define GPIOH_BRR			GPIO_BRR(GPIOH)
-
-/* Analog Switch Control Register */
-#define GPIO_ASCR(port)			MMIO32((port) + 0x2c)
-#define GPIOA_ASCR			GPIO_ASCR(GPIOA)
-#define GPIOB_ASCR			GPIO_ASCR(GPIOB)
-#define GPIOC_ASCR			GPIO_ASCR(GPIOC)
-#define GPIOH_ASCR			GPIO_ASCR(GPIOH)
 
 /*****************************************************************************/
 /* Register values                                                           */

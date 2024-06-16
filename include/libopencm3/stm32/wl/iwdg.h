@@ -1,9 +1,9 @@
 /** @defgroup iwdg_defines IWDG Defines
  *
- * @brief <b>Defined Constants and Types for the STM32L4xx Independent Watchdog
+ * @brief <b>Defined Constants and Types for the STM32WLxx Independent Watchdog
  * Timer</b>
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
  * @version 1.0.0
  *

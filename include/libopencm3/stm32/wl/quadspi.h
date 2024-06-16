@@ -1,6 +1,6 @@
 /** @defgroup quadspi_defines QuadSPI Defines
- * @brief Defined constants and types for the STM32L4 QuadSPI peripheral
- * @ingroup STM32L4xx_defines
+ * @brief Defined constants and types for the STM32WL QuadSPI peripheral
+ * @ingroup STM32WLxx_defines
  * @copyright SPDX: LGPL-3.0-or-later
  * @{
  */

@@ -1,8 +1,8 @@
 /** @defgroup rtc_defines RTC Defines
 
-@brief <b>Defined Constants and Types for the STM32L4xx RTC</b>
+@brief <b>Defined Constants and Types for the STM32WLxx RTC</b>
 
-@ingroup STM32L4xx_defines
+@ingroup STM32WLxx_defines
 
 @version 1.0.0
 

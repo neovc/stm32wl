@@ -1,8 +1,8 @@
 /** @defgroup timer_defines Timer Defines
 
-@brief <b>libopencm3 Defined Constants and Types for the STM32L4xx Timers</b>
+@brief <b>libopencm3 Defined Constants and Types for the STM32WLxx Timers</b>
 
-@ingroup STM32L4xx_defines
+@ingroup STM32WLxx_defines
 
 @version 1.0.0
 
