@@ -1,8 +1,8 @@
 /** @defgroup usart_defines USART Defines
  *
- * @brief <b>Defined Constants and Types for the STM32L4xx USART</b>
+ * @brief <b>Defined Constants and Types for the STM32WLxx USART</b>
  *
- * @ingroup STM32L4xx_defines
+ * @ingroup STM32WLxx_defines
  *
  * LGPL License Terms @ref lgpl_license
  */
@@ -36,9 +36,6 @@
  */
 #define USART1				USART1_BASE
 #define USART2				USART2_BASE
-#define USART3				USART3_BASE
-#define UART4				UART4_BASE
-#define UART5				UART5_BASE
 #define LPUART1				LPUART1_BASE
 /**@}*/
 
