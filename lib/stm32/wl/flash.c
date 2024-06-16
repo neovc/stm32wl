@@ -159,10 +159,7 @@ void flash_erase_page(uint32_t page)
 	flash_wait_for_last_operation();
 
 	/* page and bank are contiguous bits */
-	FLASH_CR &= ~((FLASH_CR_PNB_MASK << FLASH_CR_PNB_SHIFT) | FLASH_CR_BKER);
-	if (page > 255)	{
-		FLASH_CR |= FLASH_CR_BKER;
-	}
+	FLASH_CR &= ~(FLASH_CR_PNB_MASK << FLASH_CR_PNB_SHIFT);
 	FLASH_CR |= page << FLASH_CR_PNB_SHIFT;
 	FLASH_CR |= FLASH_CR_PER;
 	FLASH_CR |= FLASH_CR_START;
@@ -179,11 +176,11 @@ void flash_erase_all_pages(void)
 {
 	flash_wait_for_last_operation();
 
-	FLASH_CR |= FLASH_CR_MER1 | FLASH_CR_MER2;
+	FLASH_CR |= FLASH_CR_MER1;
 	FLASH_CR |= FLASH_CR_START;
 
 	flash_wait_for_last_operation();
-	FLASH_CR &= ~FLASH_CR_MER1 & ~FLASH_CR_MER2;
+	FLASH_CR &= ~FLASH_CR_MER1;
 }
 
 /** @brief Program the Option Bytes

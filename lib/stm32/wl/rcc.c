@@ -59,7 +59,7 @@ const struct rcc_clock_scale rcc_hsi16_configs[RCC_CLOCK_CONFIG_END] = {
 		.ppre2 = RCC_CFGR_PPRE_NODIV,
 		.voltage_scale = PWR_SCALE1,
 		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
-		FLASH_ACR_LATENCY_4WS,
+		FLASH_ACR_LATENCY_2WS,
 		.ahb_frequency  = 80000000,
 		.apb1_frequency = 80000000,
 		.apb2_frequency = 80000000,
