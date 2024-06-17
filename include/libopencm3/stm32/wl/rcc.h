@@ -710,11 +710,14 @@ struct rcc_clock_scale {
 };
 
 enum rcc_clock_config_entry {
-	RCC_CLOCK_VRANGE1_80MHZ,
+	RCC_CLOCK_VRANGE1_24MHZ,
+	RCC_CLOCK_VRANGE1_36MHZ,
 	RCC_CLOCK_CONFIG_END
 };
 
 extern const struct rcc_clock_scale rcc_hsi16_configs[RCC_CLOCK_CONFIG_END];
+extern const struct rcc_clock_scale rcc_msi4_configs[RCC_CLOCK_CONFIG_END];
+extern const struct rcc_clock_scale rcc_hse32_configs[RCC_CLOCK_CONFIG_END];
 
 /* --- Variable definitions ------------------------------------------------ */
 
