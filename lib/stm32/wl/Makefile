@@ -20,7 +20,6 @@
 LIBNAME		= libopencm3_stm32wl
 SRCLIBDIR	?= ../..
 
-FP_FLAGS	?= -mfloat-abi=hard -mfpu=fpv4-sp-d16
 CC		= $(PREFIX)gcc
 AR		= $(PREFIX)ar
 TGT_CFLAGS	= -g \
