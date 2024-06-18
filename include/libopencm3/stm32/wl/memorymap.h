@@ -91,7 +91,7 @@
 #define SUBGHZSPI_BASE			(PERIPH_BASE_APB3 + 0x0000)
 
 /* AHB3 is split in multiple memory ranges, thanks ST */
-#define FLASH_MEM_INTERFACE_BASE	(0x1FFF7800)
+#define FLASH_MEM_INTERFACE_BASE	(PERIPH_BASE_AHB3 + 0x4000)
 
 /* Private peripherals */
 #define DBGMCU_BASE			(PPBI_BASE + 0x00042000)
