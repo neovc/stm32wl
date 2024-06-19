@@ -41,15 +41,16 @@
  *
  *@{*/
 #define ADC1			ADC1_BASE
+#define ADC			ADC1_BASE
 /**@}*/
 
 /** @defgroup adc_channel ADC Channel Numbers
  * @ingroup adc_defines
  *
  *@{*/
-#define ADC_CHANNEL_VREF	0
-#define ADC_CHANNEL_TEMP	17
-#define ADC_CHANNEL_VBAT	18
+#define ADC_CHANNEL_TEMP	12
+#define ADC_CHANNEL_VREF	13
+#define ADC_CHANNEL_VBAT	14
 /**@}*/
 
 /** @addtogroup adc_registers
