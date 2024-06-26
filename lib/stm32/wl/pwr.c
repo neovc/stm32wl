@@ -77,30 +77,30 @@ void pwr_enable_backup_domain_write_protect(void)
 
 void pwr_subghzspi_select(void)
 {
-  PWR_SUBGHZSPICR &= ~(PWR_SUBGHZSPICR_NSS);
+	PWR_SUBGHZSPICR &= ~(PWR_SUBGHZSPICR_NSS);
 }
 
 void pwr_subghzspi_unselect(void)
 {
-  PWR_SUBGHZSPICR |= PWR_SUBGHZSPICR_NSS;
+	PWR_SUBGHZSPICR |= PWR_SUBGHZSPICR_NSS;
 }
 
 void pwr_enable_rfbusy_wakeup(void)
 {
-  PWR_CR3 |= PWR_CR3_EWRFBUSY;
+	PWR_CR3 |= PWR_CR3_EWRFBUSY;
 }
 
 void pwr_disable_rfbusy_wakeup(void)
 {
-  PWR_CR3 &= ~PWR_CR3_EWRFBUSY;
+	PWR_CR3 &= ~PWR_CR3_EWRFBUSY;
 }
 
 int pwr_is_rfbusyms(void)
 {
-  return ((PWR_SR2 & PWR_SR2_RFBUSYMS)!=0);
+	return ((PWR_SR2 & PWR_SR2_RFBUSYMS)!=0);
 }
 
 int pwr_is_rfbusys(void)
 {
-    return ((PWR_SR2 & PWR_SR2_RFBUSYS) >> 1);
+	  return ((PWR_SR2 & PWR_SR2_RFBUSYS) >> 1);
 }

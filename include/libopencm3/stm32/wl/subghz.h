@@ -7,9 +7,6 @@
 #define SUBGHZ_DEFAULT_TIMEOUT    100U /* SUBGHZ default timeout: 100ms */
 #define SUBGHZ_RFBUSY_LOOP_TIME   ((rcc_ahb_frequency*24U)>>20U)
 
-#define SUBGHZ_RADIO_READ_REGISTER   0x1D
-#define SUBGHZ_RADIO_WRITE_REGISTER  0x0D
-
 /* Registers */
 #define SUBGHZ_RAMPUPH               0x0F0
 #define SUBGHZ_RAMPUPL               0x0F1

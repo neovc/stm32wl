@@ -59,7 +59,7 @@ const struct rcc_clock_scale rcc_hsi16_configs[RCC_CLOCK_CONFIG_END] = {
 		.ppre2 = RCC_CFGR_PPRE_NODIV,
 		.voltage_scale = PWR_SCALE1,
 		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
-		FLASH_ACR_LATENCY_1WS,
+			FLASH_ACR_LATENCY_1WS,
 		.ahb_frequency  = 24000000,
 		.apb1_frequency = 24000000,
 		.apb2_frequency = 24000000,
@@ -76,7 +76,7 @@ const struct rcc_clock_scale rcc_hsi16_configs[RCC_CLOCK_CONFIG_END] = {
 		.ppre2 = RCC_CFGR_PPRE_NODIV,
 		.voltage_scale = PWR_SCALE1,
 		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
-		FLASH_ACR_LATENCY_1WS,
+			FLASH_ACR_LATENCY_1WS,
 		.ahb_frequency  = 36000000,
 		.apb1_frequency = 36000000,
 		.apb2_frequency = 36000000,
@@ -96,7 +96,7 @@ const struct rcc_clock_scale rcc_msi4_configs[RCC_CLOCK_CONFIG_END] = {
 		.ppre2 = RCC_CFGR_PPRE_NODIV,
 		.voltage_scale = PWR_SCALE1,
 		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
-		FLASH_ACR_LATENCY_1WS,
+			FLASH_ACR_LATENCY_1WS,
 		.ahb_frequency  = 24000000,
 		.apb1_frequency = 24000000,
 		.apb2_frequency = 24000000,
@@ -113,7 +113,7 @@ const struct rcc_clock_scale rcc_msi4_configs[RCC_CLOCK_CONFIG_END] = {
 		.ppre2 = RCC_CFGR_PPRE_NODIV,
 		.voltage_scale = PWR_SCALE1,
 		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
-		FLASH_ACR_LATENCY_1WS,
+			FLASH_ACR_LATENCY_1WS,
 		.ahb_frequency  = 36000000,
 		.apb1_frequency = 36000000,
 		.apb2_frequency = 36000000,
@@ -121,40 +121,40 @@ const struct rcc_clock_scale rcc_msi4_configs[RCC_CLOCK_CONFIG_END] = {
 };
 
 const struct rcc_clock_scale rcc_hse32_configs[RCC_CLOCK_CONFIG_END] = {
-       { /* 24MHz PLL from HSE 32M */
-	       .pllm = 4,
-	       .plln = 6,
-	       .pllp = RCC_PLLCFGR_PLLP(6),
-	       .pllq = RCC_PLLCFGR_PLLQ_DIV2,
-	       .pllr = RCC_PLLCFGR_PLLR_DIV2,
-	       .pll_source = RCC_PLLCFGR_PLLSRC_HSE,
-	       .hpre = RCC_CFGR_HPRE_NODIV,
-	       .ppre1 = RCC_CFGR_PPRE_NODIV,
-	       .ppre2 = RCC_CFGR_PPRE_NODIV,
-	       .voltage_scale = PWR_SCALE1,
-	       .flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
+	{ /* 24MHz PLL from HSE 32M */
+		.pllm = 4,
+		.plln = 6,
+		.pllp = RCC_PLLCFGR_PLLP(6),
+		.pllq = RCC_PLLCFGR_PLLQ_DIV2,
+		.pllr = RCC_PLLCFGR_PLLR_DIV2,
+		.pll_source = RCC_PLLCFGR_PLLSRC_HSE,
+		.hpre = RCC_CFGR_HPRE_NODIV,
+		.ppre1 = RCC_CFGR_PPRE_NODIV,
+		.ppre2 = RCC_CFGR_PPRE_NODIV,
+		.voltage_scale = PWR_SCALE1,
+		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
 		       FLASH_ACR_LATENCY_1WS,
-	       .ahb_frequency  = 24000000,
-	       .apb1_frequency = 24000000,
-	       .apb2_frequency = 24000000,
-       },
-       { /* 36MHz PLL from HSE 32M */
-	       .pllm = 4,
-	       .plln = 9,
-	       .pllp = RCC_PLLCFGR_PLLP(6),
-	       .pllq = RCC_PLLCFGR_PLLQ_DIV2,
-	       .pllr = RCC_PLLCFGR_PLLR_DIV2,
-	       .pll_source = RCC_PLLCFGR_PLLSRC_HSE,
-	       .hpre = RCC_CFGR_HPRE_NODIV,
-	       .ppre1 = RCC_CFGR_PPRE_NODIV,
-	       .ppre2 = RCC_CFGR_PPRE_NODIV,
-	       .voltage_scale = PWR_SCALE1,
-	       .flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
-		       FLASH_ACR_LATENCY_1WS,
-	       .ahb_frequency  = 36000000,
-	       .apb1_frequency = 36000000,
-	       .apb2_frequency = 36000000,
-       },
+		.ahb_frequency  = 24000000,
+		.apb1_frequency = 24000000,
+		.apb2_frequency = 24000000,
+	},
+	{ /* 36MHz PLL from HSE 32M */
+		.pllm = 4,
+		.plln = 9,
+		.pllp = RCC_PLLCFGR_PLLP(6),
+		.pllq = RCC_PLLCFGR_PLLQ_DIV2,
+		.pllr = RCC_PLLCFGR_PLLR_DIV2,
+		.pll_source = RCC_PLLCFGR_PLLSRC_HSE,
+		.hpre = RCC_CFGR_HPRE_NODIV,
+		.ppre1 = RCC_CFGR_PPRE_NODIV,
+		.ppre2 = RCC_CFGR_PPRE_NODIV,
+		.voltage_scale = PWR_SCALE1,
+		.flash_config = FLASH_ACR_DCEN | FLASH_ACR_ICEN |
+			FLASH_ACR_LATENCY_1WS,
+		.ahb_frequency  = 36000000,
+		.apb1_frequency = 36000000,
+		.apb2_frequency = 36000000,
+	},
 };
 
 void rcc_osc_ready_int_clear(enum rcc_osc osc)
@@ -684,13 +684,13 @@ uint32_t rcc_get_spi_clk_freq(uint32_t spi) {
  */
 void rcc_subghz_reset_release(void)
 {
-  RCC_CSR &= ~RCC_CSR_RFRST;
+	RCC_CSR &= ~RCC_CSR_RFRST;
 }
 
 /*---------------------------------------------------------------------------*/
 /** @brief Determine if the SUBGHZ peripheral is running (not under reset)
  */
 int rcc_subghz_running(void) {
-  return ((RCC_CSR & RCC_CSR_RFRSTF)!=0)?1:0;
+	return ((RCC_CSR & RCC_CSR_RFRSTF)!=0)?1:0;
 }
 /**@}*/
