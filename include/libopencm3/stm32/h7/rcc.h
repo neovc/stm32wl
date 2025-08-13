@@ -58,6 +58,9 @@ LGPL License Terms @ref lgpl_license
 #define RCC_D2CCIP1R              MMIO32(RCC_BASE + 0x050)
 #define RCC_D2CCIP2R              MMIO32(RCC_BASE + 0x054)
 #define RCC_D3CCIPR               MMIO32(RCC_BASE + 0x058)
+#define RCC_CIER                  MMIO32(RCC_BASE + 0x060)
+#define RCC_CIFR                  MMIO32(RCC_BASE + 0x064)
+#define RCC_CICR                  MMIO32(RCC_BASE + 0x068)
 #define RCC_AHB1RSTR              MMIO32(RCC_BASE + 0x080)
 #define RCC_AHB2RSTR              MMIO32(RCC_BASE + 0x084)
 #define RCC_AHB3RSTR              MMIO32(RCC_BASE + 0x07C)
@@ -67,6 +70,9 @@ LGPL License Terms @ref lgpl_license
 #define RCC_APB2RSTR              MMIO32(RCC_BASE + 0x098)
 #define RCC_APB3RSTR              MMIO32(RCC_BASE + 0x08C)
 #define RCC_APB4RSTR              MMIO32(RCC_BASE + 0x09C)
+#define RCC_GCR                   MMIO32(RCC_BASE + 0x0A0)
+#define RCC_D3AMR                 MMIO32(RCC_BASE + 0x0A8)
+#define RCC_RSR                   MMIO32(RCC_BASE + 0x0D0)
 #define RCC_AHB1ENR               MMIO32(RCC_BASE + 0x0D8)
 #define RCC_AHB2ENR               MMIO32(RCC_BASE + 0x0DC)
 #define RCC_AHB3ENR               MMIO32(RCC_BASE + 0x0D4)
@@ -84,6 +90,47 @@ LGPL License Terms @ref lgpl_license
 #define RCC_APB2LPENR             MMIO32(RCC_BASE + 0x118)
 #define RCC_APB3LPENR             MMIO32(RCC_BASE + 0x10C)
 #define RCC_APB4LPENR             MMIO32(RCC_BASE + 0x11C)
+#define RCC_C1_RSR                MMIO32(RCC_BASE + 0x130)
+
+#define RCC_C1_AHB3ENR            MMIO32(RCC_BASE + 0x134)
+#define RCC_C1_AHB1ENR            MMIO32(RCC_BASE + 0x138)
+#define RCC_C1_AHB2ENR            MMIO32(RCC_BASE + 0x13C)
+#define RCC_C1_AHB4ENR            MMIO32(RCC_BASE + 0x140)
+#define RCC_C1_APB3ENR            MMIO32(RCC_BASE + 0x144)
+#define RCC_C1_APB1LENR           MMIO32(RCC_BASE + 0x148)
+#define RCC_C1_APB1HENR           MMIO32(RCC_BASE + 0x14C)
+#define RCC_C1_APB2ENR            MMIO32(RCC_BASE + 0x150)
+#define RCC_C1_APB4ENR            MMIO32(RCC_BASE + 0x154)
+#define RCC_C1_AHB3LPENR          MMIO32(RCC_BASE + 0x15C)
+#define RCC_C1_AHB1LPENR          MMIO32(RCC_BASE + 0x160)
+#define RCC_C1_AHB2LPENR          MMIO32(RCC_BASE + 0x164)
+#define RCC_C1_AHB4LPENR          MMIO32(RCC_BASE + 0x168)
+#define RCC_C1_APB3LPENR          MMIO32(RCC_BASE + 0x16C)
+#define RCC_C1_APB1LLPENR         MMIO32(RCC_BASE + 0x170)
+#define RCC_C1_APB1HLPENR         MMIO32(RCC_BASE + 0x174)
+#define RCC_C1_APB2LPENR          MMIO32(RCC_BASE + 0x178)
+#define RCC_C1_APB4LPENR          MMIO32(RCC_BASE + 0x17C)
+
+#define RCC_C2_RSR                MMIO32(RCC_BASE + 0x190)
+#define RCC_C2_AHB3ENR            MMIO32(RCC_BASE + 0x194)
+#define RCC_C2_AHB1ENR            MMIO32(RCC_BASE + 0x198)
+#define RCC_C2_AHB2ENR            MMIO32(RCC_BASE + 0x19C)
+#define RCC_C2_AHB4ENR            MMIO32(RCC_BASE + 0x1A0)
+#define RCC_C2_APB3ENR            MMIO32(RCC_BASE + 0x1A4)
+#define RCC_C2_APB1LENR           MMIO32(RCC_BASE + 0x1A8)
+#define RCC_C2_APB1HENR           MMIO32(RCC_BASE + 0x1AC)
+#define RCC_C2_APB2ENR            MMIO32(RCC_BASE + 0x1B0)
+#define RCC_C2_APB4ENR            MMIO32(RCC_BASE + 0x1B4)
+#define RCC_C2_AHB3LPENR          MMIO32(RCC_BASE + 0x1BC)
+#define RCC_C2_AHB1LPENR          MMIO32(RCC_BASE + 0x1C0)
+#define RCC_C2_AHB2LPENR          MMIO32(RCC_BASE + 0x1C4)
+#define RCC_C2_AHB4LPENR          MMIO32(RCC_BASE + 0x1C8)
+#define RCC_C2_APB3LPENR          MMIO32(RCC_BASE + 0x1CC)
+#define RCC_C2_APB1LLPENR         MMIO32(RCC_BASE + 0x1D0)
+#define RCC_C2_APB1HLPENR         MMIO32(RCC_BASE + 0x1D4)
+#define RCC_C2_APB2LPENR          MMIO32(RCC_BASE + 0x1D8)
+#define RCC_C2_APB4LPENR          MMIO32(RCC_BASE + 0x1DC)
+
 #define RCC_BDCR                  MMIO32(RCC_BASE + 0x70)
 #define RCC_CSR                   MMIO32(RCC_BASE + 0x74)
 #define RCC_SSCGR                 MMIO32(RCC_BASE + 0x80)
@@ -418,6 +465,12 @@ LGPL License Terms @ref lgpl_license
 /**@}*/
 
 
+/** @defgroup rcc_rsr_values RCC_RSR Values
+ * @ingroup rcc_registers
+ * @{*/
+#define RCC_RSR_RMVF             BIT16
+/**@}*/
+
 #define RCC_HSI_BASE_FREQUENCY              64000000UL
 
 /** Enumerations for core system/bus clocks for user/driver/system access to base bus clocks
@@ -474,6 +527,7 @@ enum rcc_periph_clken {
 	RCC_DMA1        = _REG_BIT(0xD8, 0),
 	RCC_DMA2        = _REG_BIT(0xD8, 1),
 	RCC_ADC12       = _REG_BIT(0xD8, 5),
+	RCC_ART         = _REG_BIT(0xD8, 14),
 	RCC_ETH1MAC     = _REG_BIT(0xD8, 15),
 	RCC_ETH1TX      = _REG_BIT(0xD8, 16),
 	RCC_ETH1RX      = _REG_BIT(0xD8, 17),
@@ -496,9 +550,14 @@ enum rcc_periph_clken {
 	RCC_MDMA        = _REG_BIT(0xD4, 0),
 	RCC_DMA2D       = _REG_BIT(0xD4, 4),
 	RCC_JPGDEC      = _REG_BIT(0xD4, 5),
+	RCC_FLITF       = _REG_BIT(0xD4, 6),
 	RCC_FMC         = _REG_BIT(0xD4, 12),
 	RCC_QSPI        = _REG_BIT(0xD4, 14),
 	RCC_SDMMC1      = _REG_BIT(0xD4, 16),
+	RCC_DTCM1       = _REG_BIT(0xD4, 28),
+	RCC_DTCM2       = _REG_BIT(0xD4, 28),
+	RCC_ITCM1       = _REG_BIT(0xD4, 30),
+	RCC_AXISRAM     = _REG_BIT(0xD4, 31),
 
 	/* AHB4 peripherals*/
 	RCC_GPIOA       = _REG_BIT(0xE0, 0),
@@ -570,6 +629,7 @@ enum rcc_periph_clken {
 
 	/* APB3 peripherals */
 	RCC_LTDCEN      = _REG_BIT(0xE4, 3),
+	RCC_DSIEN       = _REG_BIT(0xE4, 4),
 	RCC_WWDG1EN     = _REG_BIT(0xE4, 6),
 
 	/* APB4 peripherals */
@@ -592,16 +652,17 @@ enum rcc_periph_rst {
 	RST_DMA1        = _REG_BIT(0x80, 0),
 	RST_DMA2        = _REG_BIT(0x80, 1),
 	RST_ADC12       = _REG_BIT(0x80, 5),
+	RST_ART         = _REG_BIT(0x80, 14),
 	RST_ETH1MAC     = _REG_BIT(0x80, 15),
 	RST_USB1OTGRST  = _REG_BIT(0x80, 25),
 	RST_USB2OTGRST  = _REG_BIT(0x80, 27),
 
 	/* AHB2 peripherals */
-	RST_DCMI        = _REG_BIT(0xDC, 0),
-	RST_CRYP        = _REG_BIT(0xDC, 4),
-	RST_HASH        = _REG_BIT(0xDC, 5),
-	RST_RNG         = _REG_BIT(0xDC, 6),
-	RST_SDMMC2      = _REG_BIT(0xDC, 9),
+	RST_DCMI        = _REG_BIT(0x84, 0),
+	RST_CRYP        = _REG_BIT(0x84, 4),
+	RST_HASH        = _REG_BIT(0x84, 5),
+	RST_RNG         = _REG_BIT(0x84, 6),
+	RST_SDMMC2      = _REG_BIT(0x84, 9),
 
 	/* AHB3 peripherals */
 	RST_MDMA        = _REG_BIT(0x7C, 0),
@@ -679,7 +740,8 @@ enum rcc_periph_rst {
 	RST_HRTIM       = _REG_BIT(0x98, 29),
 
 	/* APB3 peripherals */
-	RST_LTDCRST     = _REG_BIT(0x8C, 3),
+	RST_LTDC        = _REG_BIT(0x8C, 3),
+	RST_DSI         = _REG_BIT(0x8C, 4),
 
 	/* APB4 peripherals */
 	RST_SYSCFG      = _REG_BIT(0x9C, 1),

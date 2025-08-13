@@ -28,10 +28,12 @@
 #define PERIPH_BASE_APB1    0x40000000U
 #define PERIPH_BASE_APB2    0x40010000U
 #define PERIPH_BASE_APB3    0x50000000U
+#define PERIPH_BASE_APB4    0x58000000U
+
 #define PERIPH_BASE_AHB1    0x40020000U
 #define PERIPH_BASE_AHB2    0x48020000U
 #define PERIPH_BASE_AHB3    0x51000000U
-#define PERIPH_BASE_AHB4    0x58000000U
+#define PERIPH_BASE_AHB4    0x58020000U
 
 /* Table 8: Register boundary addresses */
 
@@ -49,14 +51,17 @@
 #define GPIO_PORT_K_BASE    0x58022800U
 #define RCC_BASE            0x58024400U
 #define POWER_CONTROL_BASE  0x58024800U
+#define PWR_BASE            0x58024800U
 #define CRC_BASE            0x58024C00U
 #define BDMA_BASE           0x58025400U
 #define DMAMUX2_BASE        0x58025800U
 #define ADC3_BASE           0x58026000U
 #define HSEM_BASE           0x58026400U
+#define RAMECC3_BASE        0x58027000U
 
 /* APB4 Peripherals */
 #define SAI4_BASE           0x58005400U
+#define IWDG2_BASE          0x58004C00U
 #define IWDG1_BASE          0x58004800U
 #define RTC_BASE            0x58004000U
 #define VREF_BASE           0x58003C00U
@@ -72,6 +77,7 @@
 #define EXTI_BASE           0x58000000U
 
 /* AHB3 Peripherals */
+#define RAMECC1_BASE        0x52009000U
 #define DELAY_SDMMC1_BASE   0x52008000U
 #define SDMMC1_BASE         0x52007000U
 #define DELAY_QSPI_BASE     0x52006000U
@@ -86,8 +92,10 @@
 /* APB3 Peripherals */
 #define WWDG1_BASE          0x50003000U
 #define LTDC_BASE           0x50001000U
+#define DSIHOST_BASE        0x50000000U
 
 /* AHB2 Peripherals */
+#define RAMECC2_BASE        0x48023000U
 #define DELAY_SDMMC2_BASE   0x48022800U
 #define SDMMC2_BASE         0x48022400U
 #define RNG_BASE            0x48021800U
@@ -99,6 +107,7 @@
 #define USB2_OTG_FS_BASE    0x40080000U
 #define USB1_OTG_HS_BASE    0x40040000U
 #define ETHERNET_MAC_BASE   0x40028000U
+#define ART_BASE            0x40024400U
 #define ADC1_ADC2_BASE      0x40022000U
 #define DMAMUX1_BASE        0x40020800U
 #define DMA2_BASE           0x40020400U
@@ -144,6 +153,7 @@
 #define SPDIFRX1_BASE       0x40004000U
 #define SPI3_BASE           0x40003C00U
 #define SPI2_BASE           0x40003800U
+#define WWDG2_BASE          0x40002C00U
 #define LPTIM1_BASE         0x40002400U
 #define TIM14_BASE          0x40002000U
 #define TIM13_BASE          0x40001C00U
