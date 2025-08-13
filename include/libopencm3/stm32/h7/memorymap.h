@@ -63,6 +63,7 @@
 #define SAI4_BASE           0x58005400U
 #define IWDG2_BASE          0x58004C00U
 #define IWDG1_BASE          0x58004800U
+#define IWDG_BASE           IWDG1_BASE
 #define RTC_BASE            0x58004000U
 #define VREF_BASE           0x58003C00U
 #define COMP1_BASE          0x58003800U
